@@ -41,4 +41,21 @@ class LoggedController extends Controller
 
         return redirect() -> route('employee-index');
     }
+
+    public function create(){
+
+        $locations = Location::all();
+
+        return view('employees.create', compact('locations'));
+    }
+
+    public function store(Request $request){
+
+        $data = $request -> all();
+
+        Employee::create($data);
+
+        return redirect() -> route('employee-index');
+
+    }
 }

@@ -4,8 +4,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Employees</div>
+            <div class="card container">
+                <div class="card-header row">
+                    <div class="col my-auto">
+                        <h4>Employees</h4>
+                    </div>
+                    <div class="col text-right pr-2">
+                        <a class="btn btn-primary" href=" {{ route('employee-create') }} ">New Employee</a>
+                    </div>
+                </div>
 
                 <div class="card-body">
                     <ul>
