@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'GuestController@index')->name('employee-index');
+Route::get('/show/{id}', 'GuestController@show') -> name('employee-show');
