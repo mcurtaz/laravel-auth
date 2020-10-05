@@ -21,6 +21,12 @@
                             Date of Birth: {{ $employee -> date_of_birth }}
                         </li>
                     </ul>
+                    @auth
+                    <a class="btn btn-primary" href=" ">EDIT</a>
+                    <a class="btn btn-danger" href=" {{ route('employee-destroy', $employee -> id) }} ">DELETE</a>
+                    @else
+                    <a href=" {{ url('/login') }} ">Log in to Edit/Update Employees</a>    
+                    @endauth
                 </div>
             </div>
         </div>
