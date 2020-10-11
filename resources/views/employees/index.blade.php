@@ -18,6 +18,7 @@
                     <ul>
                         @foreach ($employees as $employee)
                         <li>
+                            {{-- stampo la lista degli employees e ogni nome è un link alla pagina show. mando l'id che nel controller servirà per cercare i dati di quell'employee con quell'id e mandarli alla pagina show --}}
                             <a href=" {{ route('employee-show', $employee -> id) }} ">
                                 {{ $employee -> name }}
                                 {{ $employee -> lastname }}    
